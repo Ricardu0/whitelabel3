@@ -32,7 +32,7 @@ async function start() {
         await sequelize.authenticate();
         console.log("Conectado ao MySQL Azure com sucesso!");
 
-        // Sincroniza o model com o banco; em produção, prefira migrations
+        // Sincroniza o model;
         await sequelize.sync({ alter: true });
         console.log("Tabela sincronizada!");
 

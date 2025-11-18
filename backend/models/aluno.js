@@ -55,4 +55,5 @@ const Aluno = sequelize.define(
     }
 );
 
+//exporta para alunos
 module.exports = Aluno;

@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email_aluno)) return showMessage("Email em formato inválido.", true);
 
-        // Envia para o backend (a senha será hashada no servidor)
+        // Envia para o backend (a senha será hashada no servidor), como pode ser visto dps
         try {
             const resp = await fetch("/api/alunos", {
                 method: "POST",

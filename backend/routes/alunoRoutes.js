@@ -5,7 +5,7 @@ const alunoController = require("../controllers/alunoController");
 
 const router = express.Router();
 
-// Regras de validação para criação
+// Regras de validação para criação, e tudo mais
 const createValidation = [
     body("nome_completo")
         .trim()

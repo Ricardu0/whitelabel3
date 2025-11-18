@@ -6,7 +6,7 @@ const Aluno = require("../models/aluno");
 const SALT_ROUNDS = 10;
 
 exports.createAluno = async (req, res) => {
-    // Validação do express-validator (regras no route)
+    // Validação do express-validator (regras no route), e tudo mais.
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(400).json({ success: false, errors: errors.array() });
