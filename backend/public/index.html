@@ -7,7 +7,6 @@
     <title>Cadastro de Aluno</title>
         <link rel="stylesheet" href="/styles.css">
 </head>
-<script src="app.js"></script>
 <body>
 <div class="page">
     <header class="header">
@@ -21,28 +20,33 @@
         <form id="alunoForm" class="form" novalidate>
             <div class="row">
                 <label for="nome_completo">Nome completo</label>
-                <input type="text" id="nome_completo" name="nome_completo" maxlength="150" required />
+                <input type="text" id="nome_completo" name="nome_completo" maxlength="150" required aria-describedby="error_nome_completo" />
+                <div class="field-error" id="error_nome_completo" aria-live="polite"></div>
             </div>
 
             <div class="row two-col">
                 <div>
                     <label for="usuario_acesso">Usuário de acesso</label>
-                    <input type="text" id="usuario_acesso" name="usuario_acesso" minlength="4" maxlength="50" required />
+                    <input type="text" id="usuario_acesso" name="usuario_acesso" minlength="4" maxlength="50" required aria-describedby="error_usuario_acesso" />
+                    <div class="field-error" id="error_usuario_acesso" aria-live="polite"></div>
                 </div>
                 <div>
                     <label for="email_aluno">Email</label>
-                    <input type="email" id="email_aluno" name="email_aluno" maxlength="120" required />
+                    <input type="email" id="email_aluno" name="email_aluno" maxlength="120" required aria-describedby="error_email_aluno" />
+                    <div class="field-error" id="error_email_aluno" aria-live="polite"></div>
                 </div>
             </div>
 
             <div class="row">
                 <label for="senha">Senha <small class="hint">(coloque mais caracteres para maior segurança)</small></label>
-                <input type="password" id="senha" name="senha" minlength="6" required />
+                <input type="password" id="senha" name="senha" minlength="6" required aria-describedby="error_senha" />
+                <div class="field-error" id="error_senha" aria-live="polite"></div>
             </div>
 
             <div class="row">
                 <label for="observacao">Observação</label>
-                <textarea id="observacao" name="observacao" maxlength="500" rows="4"></textarea>
+                <textarea id="observacao" name="observacao" maxlength="500" rows="4" aria-describedby="error_observacao"></textarea>
+                <div class="field-error" id="error_observacao" aria-live="polite"></div>
             </div>
 
             <div class="row actions">
@@ -56,6 +60,8 @@
     <footer class="footer">
         <small>Powered by Whitelabel</small>
     </footer>
+</div>
+
 </div>
 
 <script src="/app.js"></script>
