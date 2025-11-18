@@ -6,10 +6,10 @@ require("dotenv").config();
 
 // ✅ VALORES FIXOS COMO FALLBACK - ajuste conforme necessário
 const DB_CONFIG = {
-    database: process.env.DB_NAME || "dbalunes",           // Nome do banco
-    username: process.env.DB_USER || "root",               // Usuário MySQL
-    password: process.env.DB_PASS || "root",               // Senha MySQL
-    host: process.env.DB_HOST || "127.0.0.1",              // Host
+    database: process.env.DB_NAME || "db_rick",           // Nome do banco
+    username: process.env.DB_USER || "useradmin",               // Usuário MySQL
+    password: process.env.DB_PASS || "admin@123",               // Senha MySQL
+    host: process.env.DB_HOST || "serverdbp2.mysql.database.azure.com",              // Host
     port: process.env.DB_PORT || 3306,                     // Porta
     dialect: "mysql",
     dialectOptions: {
