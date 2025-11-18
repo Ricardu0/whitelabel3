@@ -52,7 +52,7 @@ app.use(express.static(path.join(__dirname, "../frontend")));
 
 // rota padrão → index.html
 app.get(/^(?!\/api).*/, (req, res) => {
-    res.sendFile(path.join(__dirname, "../../frontend/index.html"));
+    res.sendFile(path.join(__dirname, "../public/index.html"));
 });
 
 start();
