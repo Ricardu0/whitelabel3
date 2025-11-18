@@ -21,11 +21,7 @@ jobs:
           node-version: '24.x'
 
       - name: npm install
-        run: npm install --production
-
-      - name: Build application (se necessário)
-        run: npm run build || echo "No build script, skipping"
-        # O '||' evita falha se não houver script de build
+        run: npm install
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
